@@ -5,7 +5,7 @@ def login(request):
     if request.user.is_authenticated:
         return redirect('/')
     else:
-        return redirect
+        return redirect()
 
 
 def github_callback(request):
