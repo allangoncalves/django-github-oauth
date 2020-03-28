@@ -3,7 +3,7 @@ import requests
 from django.contrib.auth import get_user_model
 
 from .conf import conf
-from links import ACCESS_TOKEN_URL, PROFILE_DATA_URL
+from .links import ACCESS_TOKEN_URL, PROFILE_DATA_URL
 
 User = get_user_model()
 
