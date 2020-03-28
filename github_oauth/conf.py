@@ -14,9 +14,10 @@ class Config(object):
             if name not in self.defaults:
                 raise ImproperlyConfigured('[Django-Github-OAuth] Missing setting {0}'.format(name))
 
-conf = Config(
-    CLIENT_ID=settings.GITHUB_CLIENT_ID,
-    CLIENT_SECRET=settings.GITHUB_CLIENT_SECRET,
-    REDIRECT_URI=settings.GITHUB_REDIRECT_URI,
-    ACCEPT_TYPE='application/json',
-)
+if __name__ != '__main__':
+    conf = Config(
+        CLIENT_ID=settings.GITHUB_CLIENT_ID,
+        CLIENT_SECRET=settings.GITHUB_CLIENT_SECRET,
+        REDIRECT_URI=settings.GITHUB_REDIRECT_URI,
+        ACCEPT_TYPE='application/json',
+    )
