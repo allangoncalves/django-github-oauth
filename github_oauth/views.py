@@ -5,6 +5,7 @@ def login(request):
     if request.user.is_authenticated:
         return redirect('/')
     else:
+        console.log(request)
         return redirect()
 
 
