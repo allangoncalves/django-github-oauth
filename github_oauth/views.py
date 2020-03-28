@@ -5,7 +5,7 @@ def login(request):
     if request.user.is_authenticated:
         return redirect('/')
     else:
-        print(request)
+        print(request.path)
         return redirect()
 
 
